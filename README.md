@@ -1,70 +1,199 @@
-# Getting Started with Create React App
+# Native GovTech Learning App for Public Education Systems
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository currently contains a working frontend prototype for a GovTech learning platform. The original app in this repo was built as a simple React-based student flow with:
 
-## Available Scripts
+- student onboarding
+- dashboard and course browsing
+- course lesson and progress screens
+- basic test coverage
 
-In the project directory, you can run:
+For the DMP 2026 problem statement, this prototype should be treated as a product exploration layer, not the final technical solution.
 
-### `npm start`
+## Problem Statement Alignment
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The actual DMP 2026 project requires a mobile-first learning platform for The Apprentice Project (TAP) with:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React Native Android application architecture
+- Frappe LMS API integration
+- AI Tutor chat over WebSockets
+- offline-first support for low-connectivity environments
+- DIKSHA-compatible content integration planning
+- whitelisting architecture for external partner modules
 
-### `npm test`
+This means the current web app is only a starting point for:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- understanding student flows
+- validating screen structure
+- shaping content and learning interactions
 
-### `npm run build`
+## Current Status
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+What is already useful in this repo:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- basic onboarding flow
+- dashboard flow
+- course detail flow
+- clean component separation
+- tests for login and navigation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+What still needs to be built for the real project:
 
-### `npm run eject`
+- native Android app scaffold using React Native
+- API service layer for Frappe LMS
+- authentication and student session flow
+- WebSocket-based AI tutor messaging
+- offline storage and sync strategy
+- partner whitelisting module architecture
+- DIKSHA integration exploration
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Recommended Architecture for the Real Project
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Suggested React Native structure:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```text
+app/
+  src/
+    screens/
+      Onboarding/
+      Dashboard/
+      Course/
+      TutorChat/
+    components/
+    services/
+      api/
+      websocket/
+      storage/
+    modules/
+      lms/
+      diksha/
+      partners/
+    state/
+    utils/
+    config/
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Core modules:
 
-## Learn More
+- `services/api`: Frappe LMS REST integration
+- `services/websocket`: AI tutor real-time chat
+- `services/storage`: offline caching and sync queue
+- `modules/partners`: whitelisted partner feature loader
+- `modules/diksha`: DIKSHA interoperability layer
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Mid-Point Milestone Plan
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The best realistic mid-point milestone for this project is:
 
-### Code Splitting
+1. Set up React Native Android project scaffold
+2. Build student onboarding and login flow
+3. Connect to Frappe LMS APIs for course and lesson retrieval
+4. Show dashboard and lesson screens with live backend data
+5. Add basic offline caching for course metadata
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Expected mid-point output:
 
-### Analyzing the Bundle Size
+- working Android app scaffold
+- end-to-end onboarding flow
+- dashboard powered by Frappe backend
+- documented API integration approach
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Suggested Implementation Phases
 
-### Making a Progressive Web App
+### Phase 1: Product and Architecture Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- finalize app navigation and screen map
+- define API contracts with TAP backend
+- set up React Native project structure
 
-### Advanced Configuration
+### Phase 2: LMS Integration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- fetch courses, lessons, progress, submissions
+- map backend data to mobile-friendly models
+- handle loading, retries, and error states
 
-### Deployment
+### Phase 3: Learning Interaction
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- lesson detail
+- assignments and submissions
+- progress tracking
+- feedback display
 
-### `npm run build` fails to minify
+### Phase 4: AI Tutor
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- WebSocket chat connection
+- conversation history
+- reconnect and timeout handling
+
+### Phase 5: Offline and Deployment Readiness
+
+- local caching
+- sync queue for submissions
+- low-network fallback flows
+- DIKSHA and partner integration boundaries
+
+## Why This Repo Still Helps
+
+Even though this is not yet a React Native app, it still helps in the following ways:
+
+- validates the core student journey
+- provides reusable product thinking for screens
+- gives a base for discussion with mentors
+- helps estimate migration into React Native screens
+
+## Honest Note for Selection
+
+If you are using this repository for DMP 2026 selection, the strongest positioning is:
+
+"I have already built and tested the core student flow as a working frontend prototype. I understand the actual problem requires migrating this into a React Native Android architecture with Frappe LMS integration, WebSockets, offline support, and modular partner enablement. My next step is to convert this validated flow into a native app scaffold and connect it to the TAP backend."
+
+That is much stronger and more honest than claiming this repo already solves the full problem.
+
+## Local Development
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the app:
+
+```bash
+npm start
+```
+
+Run tests:
+
+```bash
+npm test -- --watchAll=false --runInBand
+```
+
+Build production bundle:
+
+```bash
+npm run build
+```
+
+## Next Best Step
+
+The most important next step is not more web UI polishing. It is creating a proper React Native version with:
+
+- shared product flow from this prototype
+- backend integration plan
+- architecture docs for offline, WebSocket, and partner support
+
+See [docs/dmp-2026-plan.md](/g:/C4GT/tap-learning-app/docs/dmp-2026-plan.md) for a selection-focused implementation plan.
+
+## Screenshots
+
+### Login
+
+![Login](./src/screenshots/login.png)
+
+### Dashboard
+
+![Dashboard](./src/screenshots/dashboard.png)
+
+### Course
+
+![Course](./src/screenshots/course.png)
