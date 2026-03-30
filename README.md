@@ -36,6 +36,44 @@ What is already useful in this repo:
 - clean component separation
 - tests for login and navigation
 
+## Features Implemented
+
+- student onboarding with validation
+- dashboard with course list and progress
+- course detail screen with lessons
+- mock AI tutor chat with local responses
+- GET and POST API integration with mock fallback
+- offline cache for course data
+- offline queue for feedback submissions
+
+## How To Run The App
+
+```bash
+npm install
+npm start
+```
+
+Run tests:
+
+```bash
+npm test -- --watchAll=false --runInBand
+```
+
+Build the app:
+
+```bash
+npm run build
+```
+
+## Tech Stack Used
+
+- React
+- JavaScript
+- CSS
+- Fetch API
+- React Testing Library
+- Jest
+
 What still needs to be built for the real project:
 
 - native Android app scaffold using React Native
@@ -197,3 +235,50 @@ See [docs/dmp-2026-plan.md](./docs/dmp-2026-plan.md) for a selection-focused imp
 ### Course
 
 ![Course](./screenshots/course.png)
+
+## Screenshots
+
+### Login / Onboarding
+
+![Login](src/screenshots/login.png)
+Student login and onboarding flow.
+
+### Dashboard
+
+![Dashboard](src/screenshots/dashboard.png)
+Main dashboard showing student overview.
+
+### Courses List
+
+![Courses](src/screenshots/courses.jpeg)
+List of available courses fetched from API.
+
+### Course Detail
+
+![Course Detail](src/screenshots/course.png)
+Detailed course view with content.
+
+### Lessons
+
+![Lessons](src/screenshots/lessons.jpeg)
+Lesson content inside a course.
+
+### AI Chat
+
+![AI Chat](src/screenshots/Ai_chat.jpeg)
+AI tutor chat interaction with responses.
+
+### Feedback Form
+
+![Feedback](src/screenshots/feedback.jpeg)
+Feedback submission form.
+
+### Feedback Submitted
+
+![Feedback Submit](src/screenshots/feedback_submit.jpeg)
+Successful feedback submission state.
+
+### DIKSHA Content
+
+![DIKSHA](src/screenshots/Diksha_content.jpeg)
+DIKSHA-style educational content integration.

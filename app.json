@@ -1,0 +1,21 @@
+{
+  "expo": {
+    "name": "GovTech Learning App",
+    "slug": "govtech-learning-app",
+    "version": "1.0.0",
+    "platforms": [
+      "android"
+    ],
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "android": {
+      "package": "org.theapprenticeproject.govtechlearningapp",
+      "adaptiveIcon": {
+        "backgroundColor": "#eef4fb"
+      }
+    }
+  }
+}
