@@ -1,0 +1,10 @@
+node_modules/
+.expo/
+.env
+*.log
+dist/
+build/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
