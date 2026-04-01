@@ -1,0 +1,8 @@
+{"timestamp":"2026-04-01T10:23:35.202Z","level":"info","event":"server_started","port":3102,"host":"localhost","baseUrl":"http://localhost:3102","environment":"development"}
+{"timestamp":"2026-04-01T10:23:39.066Z","level":"info","event":"request_completed","requestId":"req-1","method":"GET","path":"/api/method/ping","status":200,"durationMs":10,"partnerId":""}
+{"timestamp":"2026-04-01T10:23:39.206Z","level":"info","event":"request_completed","requestId":"req-2","method":"POST","path":"/api/method/tap_lms.api.student_login","status":200,"durationMs":6,"partnerId":"tap-demo"}
+{"timestamp":"2026-04-01T10:23:39.220Z","level":"info","event":"request_completed","requestId":"req-3","method":"GET","path":"/api/method/tap_lms.api.get_student_courses?student=STU-814774","status":200,"durationMs":2,"partnerId":"tap-demo"}
+{"timestamp":"2026-04-01T10:23:39.229Z","level":"info","event":"request_completed","requestId":"req-4","method":"GET","path":"/api/method/tap_lms.api.get_student_progress?student=STU-814774","status":200,"durationMs":2,"partnerId":"tap-demo"}
+{"timestamp":"2026-04-01T10:23:39.239Z","level":"info","event":"request_completed","requestId":"req-5","method":"POST","path":"/api/resource/TAP%20Feedback","status":201,"durationMs":5,"partnerId":"tap-demo"}
+{"timestamp":"2026-04-01T10:23:39.241Z","level":"info","event":"request_completed","requestId":"req-6","method":"GET","path":"/api/resource/TAP%20Feedback?course_id=101","status":200,"durationMs":1,"partnerId":"tap-demo"}
+{"timestamp":"2026-04-01T10:23:39.250Z","level":"info","event":"request_completed","requestId":"req-7","method":"POST","path":"/api/method/tap_lms.api.refresh_token","status":200,"durationMs":4,"partnerId":"tap-demo"}

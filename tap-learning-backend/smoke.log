@@ -1,0 +1,12 @@
+TAP learning backend running on http://localhost:3101
+[2026-04-01T10:06:59.389Z] GET /api/method/ping 
+[2026-04-01T10:06:59.805Z] POST /api/method/tap_lms.api.student_login { mobile_number: '9999999999', full_name: 'Asha' }
+[2026-04-01T10:06:59.817Z] POST /api/method/tap_lms.api.refresh_token { student: 'STU-001', refresh_token: 'refresh-token' }
+[2026-04-01T10:06:59.821Z] GET /api/method/tap_lms.api.get_student_courses?student=STU-001 
+[2026-04-01T10:06:59.829Z] GET /api/method/tap_lms.api.get_student_progress?student=STU-001 
+[2026-04-01T10:06:59.833Z] GET /api/resource/TAP%20Feedback?course_id=101 
+[2026-04-01T10:06:59.836Z] POST /api/resource/TAP%20Feedback {
+  data: { student_name: 'Asha', course_id: 101, feedback: 'Helpful lesson.' }
+}
+[2026-04-01T10:06:59.839Z] GET /api/resource/TAP%20Feedback?course_id=101 
+[2026-04-01T10:06:59.842Z] GET /api/resource/TAP%20Feedback/FDBK-0001 
